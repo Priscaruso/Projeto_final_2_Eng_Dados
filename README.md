@@ -16,6 +16,16 @@ Este projeto consiste na criação de uma solução que simula um Parque Eólico
 O objetivo é monitorar os dados produzidos e ver se correspondem com o esperado, de modo a garantir a qualidade da produção de energia no Parque Eólico. 
 
 ## Etapas
+O projeto consiste nos seguintes passos:
+  * Criar um Data Stream no Kinesis Data Stream
+  * Criar aplicações Python para gerar os dados
+  * Criar um Kinesis Data Firehouse
+  * Criar um bucket no S3
+  * Criar uma database no Glue Data Catalog
+  * Criar um crawler no Glue Jobs
+  * Criar um job ETL no Glue Jobs para transformar os dados gerados de JSON para Parquet
+  * Criar um crawler para 
+  * 
 
 
 ## Pré requisitos
