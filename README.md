@@ -19,6 +19,6 @@ O objetivo é monitorar os dados produzidos e ver se correspondem com o esperado
 
 
 ## Pré requisitos
-
+Para executar esse projeto é necessário ter o Jupyter Notebook instalado localmente ou uma conta Google para acessar o Google [Colab](https://colab.research.google.com/) e uma conta na nuvem AWS.
 
 ## Execução
