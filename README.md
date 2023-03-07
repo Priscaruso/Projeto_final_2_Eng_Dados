@@ -46,7 +46,7 @@ A imagem abaixo demonstra o fluxo de dados criado.
 Nessa segunda etapa, geram-se as aplicações python que simulam os sensores de um parque eólico e que produzem os dados que serão, posteriormente, usados pelos serviços da AWS.
 São criadas 3 aplicações python, simulando 3 sensores conforme abaixo:
  * Sensor de fator de potência gerando potências em torno de 1
- * Sensor de temperatura gerando temperaturas em torno de 25°C
+ * Sensor de temperatura gerando temperaturas em torno de 23°C
  * Sensor de pressão hidráulica gerando pressão em torno de 70 BAR
 
 ### Criar um Kinesis Data Firehouse
@@ -67,3 +67,7 @@ São criadas 3 aplicações python, simulando 3 sensores conforme abaixo:
 
 
 ### Criar consultas no Athena
+
+
+
+OBS: Os serviços Kinesis Data Stream, Kinesis Data Firehouse, Glue crawler e Glue Jobs são pagos e podem gerar custos!
