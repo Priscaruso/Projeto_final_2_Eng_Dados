@@ -49,6 +49,14 @@ São criadas 3 aplicações python, simulando 3 sensores conforme abaixo:
  * Sensor de temperatura gerando temperaturas em torno de 23°C
  * Sensor de pressão hidráulica gerando pressão em torno de 70 BAR
 
+As aplicações produzem dados a cada 10 segundos no formato JSON contendo os seguintes campos:
+ * id - identificador do registro
+ * data - o dado em si
+ * type - o tipo de dado, podendo ser 'powerfactor', 'temperature' ou 'hydraulicpressure'
+ * timestamp - data e hora que o registro foi gerado
+ 
+
+
 ### Criar um Kinesis Data Firehouse
 
 
