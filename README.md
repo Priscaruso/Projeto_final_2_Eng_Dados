@@ -23,7 +23,7 @@ O projeto consiste nos seguintes passos:
   * Criar um bucket no S3 para receber os dados
   * Criar uma database no Glue Data Catalog
   * Criar um crawler no Glue 
-  * Criar um job ETL no Glue Jobs para transformar os dados gerados de JSON para Parquet
+  * Criar um job ETL no Glue para transformar os dados gerados de JSON para Parquet
   * Criar um outro crawler no Glue para inferir o schema dos dados transformados
   * Criar consultas no Athena
 
@@ -49,3 +49,21 @@ São criadas 3 aplicações python, simulando 3 sensores conforme abaixo:
  * Sensor de temperatura gerando temperaturas em torno de 25°C
  * Sensor de pressão hidráulica gerando pressão em torno de 70 BAR
 
+### Criar um Kinesis Data Firehouse
+
+
+### Criar um bucket no S3
+
+
+### Criar uma database no Glue Data Catalog
+
+
+### Criar um crawler no Glue 
+
+### Criar um job ETL no Glue
+
+
+### Criar um outro crawler no Glue
+
+
+### Criar consultas no Athena
