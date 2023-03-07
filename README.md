@@ -32,3 +32,20 @@ O projeto consiste nos seguintes passos:
 Para executar esse projeto é necessário ter o Jupyter Notebook instalado localmente ou uma conta Google para acessar o Google [Colab](https://colab.research.google.com/) e uma conta na nuvem AWS.
 
 ## Execução
+
+### Criar um Data Stream No Kinesis Data Stream
+
+Essa primeira etapa consiste em acessar o serviço Kinesis e gerar fluxos de dados (data streams) de nome "Stream2", por exemplo, que será usado pela aplicação python geradora de dados para transmitir os dados como streaming. 
+
+A imagem abaixo demonstra o fluxo de dados criado.
+
+![kinesis data stream](https://user-images.githubusercontent.com/83982164/223455586-30472590-c2f9-494b-b255-e0f795fdccba.jpg)
+
+### Criar Aplicações Python
+
+Nessa segunda etapa, geram-se as aplicações python que simulam os sensores de um parque eólico e que produzem os dados que serão, posteriormente, usados pelos serviços da AWS.
+São criadas 3 aplicações python, simulando 3 sensores conforme abaixo:
+ * Sensor de fator de potência gerando potências em torno de 1
+ * Sensor de temperatura gerando temperaturas em torno de 25°C
+ * Sensor de pressão hidráulica gerando pressão em torno de 70 BAR
+
