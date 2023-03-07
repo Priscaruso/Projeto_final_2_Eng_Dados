@@ -19,8 +19,8 @@ O objetivo é monitorar os dados produzidos e ver se correspondem com o esperado
 O projeto consiste nos seguintes passos:
   * Criar um Data Stream no Kinesis Data Stream
   * Criar aplicações Python para gerar os dados
-  * Criar um Kinesis Data Firehouse para entregar os dados
   * Criar um bucket no S3 para receber os dados
+  * Criar um Kinesis Data Firehouse para entregar os dados
   * Criar uma database no Glue Data Catalog
   * Criar um crawler no Glue 
   * Criar um job ETL no Glue para transformar os dados gerados de JSON para Parquet
@@ -55,12 +55,15 @@ As aplicações produzem dados a cada 10 segundos no formato JSON contendo os se
  * type - o tipo de dado, podendo ser 'powerfactor', 'temperature' ou 'hydraulicpressure'
  * timestamp - data e hora que o registro foi gerado
  
+### Criar um bucket no S3
+O terceiro passo consiste em acessar o serviço S3 e criar um bucket para receber os dados vindos do Kinesis Data Firehouse, conforme mostra a image abaixo:
+
+
+
 
 
 ### Criar um Kinesis Data Firehouse
-
-
-### Criar um bucket no S3
+A quarta etapa é criar um stream de entrega 
 
 
 ### Criar uma database no Glue Data Catalog
