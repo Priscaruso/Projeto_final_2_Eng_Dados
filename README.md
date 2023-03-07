@@ -19,13 +19,13 @@ O objetivo é monitorar os dados produzidos e ver se correspondem com o esperado
 O projeto consiste nos seguintes passos:
   * Criar um Data Stream no Kinesis Data Stream
   * Criar aplicações Python para gerar os dados
-  * Criar um Kinesis Data Firehouse
-  * Criar um bucket no S3
+  * Criar um Kinesis Data Firehouse para entregar os dados
+  * Criar um bucket no S3 para receber os dados
   * Criar uma database no Glue Data Catalog
-  * Criar um crawler no Glue Jobs
+  * Criar um crawler no Glue 
   * Criar um job ETL no Glue Jobs para transformar os dados gerados de JSON para Parquet
-  * Criar um crawler para 
-  * 
+  * Criar um outro crawler no Glue para inferir o schema dos dados transformados
+  * Criar consultas no Athena
 
 
 ## Pré requisitos
