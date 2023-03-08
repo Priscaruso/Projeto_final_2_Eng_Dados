@@ -37,6 +37,7 @@ Esse é um projeto end-to-end, desde a produção dos dados até a disponibiliza
 
 ![Arquitetura Parque Eólico](https://user-images.githubusercontent.com/83982164/223862989-83c4ceca-a6e5-478c-9aa4-59b1232c6906.png)
 
+Créditos pela imagem da turbina eólica: <a href="https://br.freepik.com/vetores-gratis/ilustracao-vetorial-com-turbina-eolica-sobre-ceu-azul-nublado_11062267.htm#query=turbina%20eolica&position=32&from_view=keyword&track=ais#position=32&query=turbina%20eolica">Imagem de macrovector</a> no Freepik
 
 ## Pré-requisitos
 Para executar esse projeto é necessário ter o Jupyter Notebook instalado localmente ou uma conta Google para acessar o [Colab](https://colab.research.google.com/) e uma conta na nuvem AWS.
