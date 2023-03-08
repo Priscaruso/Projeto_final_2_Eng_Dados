@@ -33,7 +33,7 @@ Para executar esse projeto é necessário ter o Jupyter Notebook instalado local
 
 ## Execução
 
-### Criar um Data Stream No Kinesis Data Stream
+### Criar um Data Stream no Kinesis Data Stream
 
 Essa primeira etapa consiste em acessar o serviço Kinesis e gerar fluxos de dados (data streams) de nome "Stream2", por exemplo, que será usado pela aplicação python geradora de dados para transmitir os dados como streaming. 
 
