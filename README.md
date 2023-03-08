@@ -104,7 +104,7 @@ Essa etapa consiste em criar um novo bucket no S3 chamado *projeto2-aws-engdados
 
 
 ### Criar um job ETL no Glue
-A sétima etapa é criar e executar um job ETL, que extraia a tabela *projeto2_aws_engdados* gerada no Data Catalog, transforme-a do formato JSON para Parquet e armazene no bucket *projeto2-aws-engdados-datalake* na pasta *datalake*, que funciona como um datalake. 
+A sétima etapa é criar e executar um job ETL, que extraia a tabela *projeto2_aws_engdados* gerada no Data Catalog, transforme-a do formato JSON para Parquet e armazene no bucket *projeto2-aws-engdados-datalake* na pasta *datalake*, que funciona como um datalake. Para criar o job, usa-se uma interface visual iniciando com um canvas em branco, onde pode-se selecionar os ícones que representam a origem, o tipo de transformação e o destino dos dados. A figura abaixo ilustra isso:
 
 ![image](https://user-images.githubusercontent.com/83982164/223786558-10c57981-87cf-47ce-9d26-43853fd1be24.png)
 
