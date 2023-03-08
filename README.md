@@ -35,6 +35,7 @@ O projeto consiste nos seguintes passos:
 ## Arquitetura dos dados
 Esse é um projeto end-to-end, desde a produção dos dados até a disponibilização dos mesmos para consulta, usando os serviços da AWS. A arquitetura completa pode ser visualizada a seguir:
 
+![Arquitetura Parque Eólico](https://user-images.githubusercontent.com/83982164/223862989-83c4ceca-a6e5-478c-9aa4-59b1232c6906.png)
 
 
 ## Pré-requisitos
