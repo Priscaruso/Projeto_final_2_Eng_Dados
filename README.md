@@ -76,7 +76,7 @@ O terceiro passo consiste em acessar o serviço S3 e criar um bucket de nome *pr
 
 
 ### Criar um Kinesis Data Firehouse
-A quarta etapa é criar um fluxo de entrega no Kinesis Data Firehouse que entregará os dados em um mesmo arquivo particionado por ano, mês e dia ao bucket no S3. Ao criar o fluxo, precisa-se configurar a origem e o destino dos dados como sendo, respectivamente, o Kinesis Data Stream e o bucket criado na etapa anterior. Precisa-se também estabelecer o tempo de latência (da entrega dos dados ao bucket) como 60 segundos. A figura abaixo mostra o Data Firehouse gerado:
+A quarta etapa é criar um fluxo de entrega no Kinesis Data Firehouse que entregará todos os dados em um mesmo arquivo particionado por ano, mês e dia ao bucket no S3. Ao criar o fluxo, precisa-se configurar a origem e o destino dos dados como sendo, respectivamente, o Kinesis Data Stream e o bucket criado na etapa anterior. Precisa-se também estabelecer o tempo de latência (da entrega dos dados ao bucket) como 60 segundos. A figura abaixo mostra o Data Firehouse gerado:
 
 ![kinesis firehose](https://user-images.githubusercontent.com/83982164/223737642-cbe54edc-e5d7-48b5-8362-f8dd4bf1e21c.jpg)
 
