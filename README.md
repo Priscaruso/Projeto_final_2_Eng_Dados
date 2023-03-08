@@ -55,15 +55,17 @@ As aplicações produzem dados a cada 10 segundos no formato JSON contendo os se
  * type - o tipo de dado, podendo ser 'powerfactor', 'temperature' ou 'hydraulicpressure'
  * timestamp - data e hora que o registro foi gerado
  
+ Para transmitir os dados para o data stream 'Stream2' criado no Kinesis Data Stream, deve-se, primeiramente, iniciar uma conexão cliente com o Kinesis através da biblioteca boto3. Em seguida, deve-se preencher os campos 'aws_access_key_id' e 'aws_secret_access_key' com a chave secreta gerada na sua conta da AWS, e 'region_name' com o nome da região onde o bucket da etapa anterior foi criado. Além disso, precisa também especificar o campo 'StreamName' com o nome do data scream criado na primeira etapa e o campo 'PartitionKey' com o valor da chave que será usada para identificar o shard do Kinesis Data Stream para o qual os registros serão enviados.
+ 
+ 
 ### Criar um bucket no S3
-O terceiro passo consiste em acessar o serviço S3 e criar um bucket para receber os dados vindos do Kinesis Data Firehouse, conforme mostra a image abaixo:
+O terceiro passo consiste em acessar o serviço S3 e criar um bucket de nome 'projeto2-aws-engdados', por exemplo, para receber os dados vindos do Kinesis Data Firehouse, conforme mostra a imagem abaixo:
 
-
-
+![bucket para dados da aplicação python](https://user-images.githubusercontent.com/83982164/223613153-6dc22d18-523d-45e1-96fb-fc26be1c9905.jpg)
 
 
 ### Criar um Kinesis Data Firehouse
-A quarta etapa é criar um stream de entrega 
+A quarta etapa é criar um stream de entrega no Kinesis Data Firehouse. 
 
 
 ### Criar uma database no Glue Data Catalog
