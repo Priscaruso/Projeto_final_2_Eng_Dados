@@ -57,7 +57,7 @@ Nessa segunda etapa, geram-se as aplicações python que simulam os sensores de 
 São criadas 3 aplicações python, simulando 3 sensores conforme abaixo:
  * Sensor de fator de potência gerando potências em torno de 1
  * Sensor de temperatura gerando temperaturas em torno de 23°C
- * Sensor de pressão hidráulica gerando pressão em torno de 70 BAR
+ * Sensor de pressão hidráulica gerando pressão em torno de 76 BAR
 
 As aplicações produzem dados a cada 10 segundos no formato JSON contendo os seguintes campos:
  * id - identificador do registro
@@ -75,7 +75,7 @@ O terceiro passo consiste em acessar o serviço S3 e criar um bucket de nome *pr
 
 
 ### Criar um Kinesis Data Firehouse
-A quarta etapa é criar um fluxo de entrega no Kinesis Data Firehouse que entregará os dados particionado por ano, mês e dia ao bucket no S3. Ao criar o fluxo, precisa-se configurar a origem e o destino dos dados como sendo, respectivamente, o Kinesis Data Stream e o bucket criado na etapa anterior. Precisa-se também estabelecer o tempo de latência (da entrega dos dados ao bucket) como 60 segundos. A figura abaixo mostra o Data Firehouse gerado:
+A quarta etapa é criar um fluxo de entrega no Kinesis Data Firehouse que entregará os dados em um mesmo arquivo particionado por ano, mês e dia ao bucket no S3. Ao criar o fluxo, precisa-se configurar a origem e o destino dos dados como sendo, respectivamente, o Kinesis Data Stream e o bucket criado na etapa anterior. Precisa-se também estabelecer o tempo de latência (da entrega dos dados ao bucket) como 60 segundos. A figura abaixo mostra o Data Firehouse gerado:
 
 ![kinesis firehose](https://user-images.githubusercontent.com/83982164/223737642-cbe54edc-e5d7-48b5-8362-f8dd4bf1e21c.jpg)
 
@@ -125,7 +125,7 @@ A figura, a seguir, mostra o resultado da consulta de todos os dados da tabela *
 
 ![consulta_com_athena_v2](https://user-images.githubusercontent.com/83982164/223795648-736fb050-185d-4052-aabc-a67deb1230e9.jpg)
 
-Também foi rodada uma query no qual retorna todos os campos da tabela *datalake* que tenha valores maiores que 0.9 e tipo igual a *powerfactor*, conforme visto pelas imagens abaixo:
+Também foi rodada uma query no qual retorna todos os campos da tabela *datalake* cujos dados tenham valores maiores que 0.9 e tipo igual a *powerfactor*, conforme visto pelas imagens abaixo:
 
 ![consulta_com_athena_query2](https://user-images.githubusercontent.com/83982164/223796215-0d528041-8b24-42e1-a167-bbaad7ae9a89.jpg)
 
