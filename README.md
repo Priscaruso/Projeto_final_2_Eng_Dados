@@ -26,6 +26,7 @@ O projeto consiste nos seguintes passos:
   * Criar um Kinesis Data Firehouse para entregar os dados
   * Criar uma database no Glue Data Catalog
   * Criar um crawler no Glue Data Catalog
+  * Criar um novo bucket S3
   * Criar um job ETL no Glue para transformar os dados gerados de JSON para Parquet
   * Criar um outro crawler no Glue para inferir o schema dos dados transformados
   * Criar consultas no Athena
@@ -94,7 +95,7 @@ Ao executar o crawler, é criada a tabela *projeto2-aws-engdados*, a partir do b
 ![table_1](https://user-images.githubusercontent.com/83982164/223743465-74bc9701-7057-45be-bce7-7e6632a2eb32.jpg)
 
 
-## Criar um novo bucket s3
+### Criar um novo bucket s3
 Essa etapa consiste em criar um novo bucket no S3 chamado *projeto2-aws-engdados-datalake*, que funciona como um datalake para armazenar os dados transformados gerados pelo Glue job (pasta datalake), seus scripts de transformação (pasta script), seus logs (pasta log) e arquivos temporários (pasta temp). A imagem abaixo ilustra isso:
 
 ![datalake](https://user-images.githubusercontent.com/83982164/223788621-d1acfc05-d871-44d0-aa21-7dd9f11c21c3.jpg)
