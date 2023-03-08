@@ -6,6 +6,8 @@
 
 :small_blue_diamond: [Etapas](#etapas)
 
+:small_blue_diamond: [Arquitetura dos dados](#arquitetura-dos-dados)
+
 :small_blue_diamond: [Pré-requisitos](#pré-requisitos)
 
 :small_blue_diamond: [Execução](#execução)
@@ -14,6 +16,7 @@
 ## Enunciado do projeto
 Este projeto consiste na criação de uma solução que simula um Parque Eólico com a produção de dados de sensores por meio de aplicações Python usando os serviços da AWS. 
 O objetivo é monitorar os dados produzidos e ver se correspondem com o esperado, de modo a garantir a qualidade da produção de energia no Parque Eólico. 
+
 
 ## Etapas
 O projeto consiste nos seguintes passos:
@@ -26,6 +29,11 @@ O projeto consiste nos seguintes passos:
   * Criar um job ETL no Glue para transformar os dados gerados de JSON para Parquet
   * Criar um outro crawler no Glue para inferir o schema dos dados transformados
   * Criar consultas no Athena
+
+
+## Arquitetura dos dados
+Esse é um projeto end-to-end, desde a produção dos dados até a disponibilização dos mesmos para consulta, usando os serviços da AWS. A arquitetura completa pode ser visualizada a seguir:
+
 
 
 ## Pré requisitos
