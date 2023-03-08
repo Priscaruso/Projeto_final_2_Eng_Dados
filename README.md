@@ -102,12 +102,19 @@ Essa etapa consiste em criar um novo bucket no S3 chamado *projeto2-aws-engdados
 
 
 ### Criar um job ETL no Glue
-A sétima etapa é criar um job ETL, que extraia a tabela *projeto2_aws_engdados* gerada no Data Catalog, a transforme do formato JSON para Parquet e armazene no bucket *projeto2-aws-engdados-datalake* na pasta *datalake*, que funciona como um datalake. 
+A sétima etapa é criar e executar um job ETL, que extraia a tabela *projeto2_aws_engdados* gerada no Data Catalog, transforme-a do formato JSON para Parquet e armazene no bucket *projeto2-aws-engdados-datalake* na pasta *datalake*, que funciona como um datalake. 
 
 ![image](https://user-images.githubusercontent.com/83982164/223786558-10c57981-87cf-47ce-9d26-43853fd1be24.png)
 
 
 ### Criar um outro crawler no Glue
+Após executar o job ETL e gerar os dados transformados, o próximo passo é, primeiramente, criar uma database chamada *datalake-sensores*. Em seguida, gerar um novo crawler que infira o schema desses dados transformados armazenados na pasta *datalake* do bucket *projeto2-aws-engdados-datalake* e associe a tabela produzida a essa nova database no Data Catalog, para que ela possa ser usada no Athena. A database, o crawler e a tabela gerada são demonstrados nas figuras a seguir:
+
+![database_2](https://user-images.githubusercontent.com/83982164/223792696-75ae8156-8c9b-4eda-bd22-1f695eacf1bf.jpg)
+
+![crawler_datalake_sensores_atualizado](https://user-images.githubusercontent.com/83982164/223792925-43010c83-164b-4694-858b-feb3f8070345.jpg)
+
+![table_2](https://user-images.githubusercontent.com/83982164/223793086-aae689f6-acad-48a3-a172-86693c359a8e.jpg)
 
 
 ### Criar consultas no Athena
