@@ -37,7 +37,7 @@ Esse é um projeto end-to-end, desde a produção dos dados até a disponibiliza
 
 
 
-## Pré requisitos
+## Pré-requisitos
 Para executar esse projeto é necessário ter o Jupyter Notebook instalado localmente ou uma conta Google para acessar o [Colab](https://colab.research.google.com/) e uma conta na nuvem AWS.
 
 
