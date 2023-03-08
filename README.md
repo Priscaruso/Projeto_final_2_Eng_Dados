@@ -108,7 +108,7 @@ A sétima etapa é criar e executar um job ETL, que extraia a tabela *projeto2_a
 
 
 ### Criar um outro crawler no Glue
-Após executar o job ETL e gerar os dados transformados, o próximo passo é, primeiramente, criar uma database chamada *datalake-sensores*. Em seguida, gerar um novo crawler que infira o schema desses dados transformados armazenados na pasta *datalake* do bucket *projeto2-aws-engdados-datalake* e associe a tabela produzida a essa nova database no Data Catalog, para que ela possa ser usada no Athena. A database, o crawler e a tabela gerada são demonstrados nas figuras a seguir:
+Após executar o job ETL e gerar os dados transformados, o próximo passo é, primeiramente, criar uma database chamada *datalake-sensores*. Em seguida, gerar um novo crawler que infira o schema desses dados transformados armazenados na pasta *datalake* do bucket *projeto2-aws-engdados-datalake* e associe a tabela *datalake* produzida a essa nova database no Data Catalog, para que ela possa ser usada no Athena. A database, o crawler e a tabela gerada são demonstrados nas figuras a seguir:
 
 ![database_2](https://user-images.githubusercontent.com/83982164/223792696-75ae8156-8c9b-4eda-bd22-1f695eacf1bf.jpg)
 
@@ -118,6 +118,18 @@ Após executar o job ETL e gerar os dados transformados, o próximo passo é, pr
 
 
 ### Criar consultas no Athena
+A partir das tabelas armazenadas no Data Catalog, é possível gerar consultas SQL no Athena, sem a necessidade de provisionar um servidor. Para isso, basta acessar o editor de consulta no painel do Athena, configurar o Data Catalog como a origem dos dados, a database e rodar as queries desejadas. Os dados gerados pelas consultas, devem ser armazenados em um bucket S3 específico para o Athena. 
+
+A figura, a seguir, mostra o resultado da consulta de todos os dados da tabela *datalake*:
+
+![consulta_com_athena_v2](https://user-images.githubusercontent.com/83982164/223795648-736fb050-185d-4052-aabc-a67deb1230e9.jpg)
+
+Também foi rodada uma query no qual retorna todos os campos da tabela *datalake* que tenha valores maiores que 0.9 e tipo igual a *powerfactor*, conforme visto pelas imagens abaixo:
+
+![consulta_com_athena_query2](https://user-images.githubusercontent.com/83982164/223796215-0d528041-8b24-42e1-a167-bbaad7ae9a89.jpg)
+
+![consulta_com_athena_query2_resultado](https://user-images.githubusercontent.com/83982164/223796281-af8d3e60-99d9-4535-9618-5530c256e0fd.jpg)
+
 
 
 
