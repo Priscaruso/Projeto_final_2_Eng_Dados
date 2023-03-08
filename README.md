@@ -39,18 +39,18 @@ Esse é um projeto end-to-end, desde a produção dos dados até a disponibiliza
 ## Pré requisitos
 Para executar esse projeto é necessário ter o Jupyter Notebook instalado localmente ou uma conta Google para acessar o [Colab](https://colab.research.google.com/) e uma conta na nuvem AWS.
 
+
 ## Execução
 
 ### Criar um Data Stream no Kinesis Data Stream
-
 Essa primeira etapa consiste em acessar o serviço Kinesis e gerar fluxos de dados (data streams) de nome *Stream2*, por exemplo, que será usado pela aplicação python geradora de dados para transmitir os dados como streaming. 
 
 A imagem abaixo demonstra o fluxo de dados criado.
 
 ![kinesis data stream](https://user-images.githubusercontent.com/83982164/223455586-30472590-c2f9-494b-b255-e0f795fdccba.jpg)
 
-### Criar Aplicações Python
 
+### Criar Aplicações Python
 Nessa segunda etapa, geram-se as aplicações python que simulam os sensores de um parque eólico e que produzem os dados que serão, posteriormente, usados pelos serviços da AWS.
 São criadas 3 aplicações python, simulando 3 sensores conforme abaixo:
  * Sensor de fator de potência gerando potências em torno de 1
@@ -94,7 +94,16 @@ Ao executar o crawler, é criada a tabela *projeto2-aws-engdados*, a partir do b
 ![table_1](https://user-images.githubusercontent.com/83982164/223743465-74bc9701-7057-45be-bce7-7e6632a2eb32.jpg)
 
 
+## Criar um novo bucket s3
+Essa etapa consiste em criar um novo bucket no S3 chamado *projeto2-aws-engdados-datalake*, que funciona como um datalake para armazenar os dados transformados gerados pelo Glue job (pasta datalake), seus scripts de transformação (pasta script), seus logs (pasta log) e arquivos temporários (pasta temp). A imagem abaixo ilustra isso:
+
+![datalake](https://user-images.githubusercontent.com/83982164/223788621-d1acfc05-d871-44d0-aa21-7dd9f11c21c3.jpg)
+
+
 ### Criar um job ETL no Glue
+A sétima etapa é criar um job ETL, que extraia a tabela *projeto2_aws_engdados* gerada no Data Catalog, a transforme do formato JSON para Parquet e armazene no bucket *projeto2-aws-engdados-datalake* na pasta *datalake*, que funciona como um datalake. 
+
+![image](https://user-images.githubusercontent.com/83982164/223786558-10c57981-87cf-47ce-9d26-43853fd1be24.png)
 
 
 ### Criar um outro crawler no Glue
